@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>El Cajero Mas Cabron del Mundo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+
+   
+</head>
+<body> 
+
+<main id="paginaSeleccion">
+
+    <header>
+        <h1>Bienvenid@! por favor selecciona tu cuenta.</h1>
+    </header>
+
+    <section>
+
+        <!-- cuenta de Maui -->
+        <div onclick="ingresar()" id="maui" class="cont-user">
+            <img class="img-user" src="./assets/ElMaui.png" alt="Maui!">
+            <h1>
+                EL MAUI
+            </h1>
+        </div>
+        <!-- cuenta de Gera -->
+        <div onclick="ingresar()" id="gera" class="cont-user">
+            <img class="img-user" src="./assets/ElGera.jpg" alt="Gera!">
+            <h1>
+                EL GERA
+            </h1>   
+        </div>
+        <!-- cuenta de Mali -->
+        <div onclick="ingresar()" id="mali" class="cont-user">
+            <img class="img-user" src="./assets/LaMali.jpg" alt="Mali!">
+            <h1>
+                LA MALI
+            </h1>      
+        </div>
+    </section>
+</main>   
+
+<!-- Validacion de identidad -->
+
+<div id="validacion" class="validacion">
+    <h2>Por favor verifica tu identidad</h2>
+    <p>ingresa tu contraseña para que sepamos que NO ERES UN PUTO LADRON Y TENGAMOS QUE LLEVARTE AL CARAJO</p>
+    <input id="claveIngresada" type="password" placeholder="ingresa tu clave">
+    <button onclick="validarContraseña()" id="ingresar">ingresar</button>
+</div>
+<!-- este es el inicio de sesion de maui -->
+<section id="inicioMaui" class="usuarioIniciado">
+
+    <div id="cuadrodeaccion" class="cuadrodeaccion">
+        <label for="">Hola de nuevo</label>
+        <label for="">nombre</label>
+        <div class="inputs">
+            <h2>por favor, indica que es lo que deseas hacer</h2>
+            <button onclick="consultarSaldo(Mauricio)" id="btnconsultar">Consultar Saldo</button>
+            <button onclick="MostrarIngresarMonto()">Ingresar Monto</button>
+            <button>Retirar Monto</button>
+        </div>
+    </div>
+
+    <div id="mostrarSaldo" class="mostrarSaldo">
+        <h1 id="cuantoEs">cantidad</h1>
+    </div>
+    <div id="ingresarMonto" class="ingresarMonto">
+        <h2>Cuanto deseas ingresar?</h2>
+        <input id="montoIngresado" type="text" placeholder="Saldo a ingresar">
+        <button  onclick="ingresarMonto()" id="btnIngresarMonto">Ingresar Monto</button>
+    </div>
+</section>
+<!--inicio de sesion de Gera -->
+<section id="usuarioIniciado-Gera" class="usuarioIniciado">
+    <div class="cuadrodeaccion">
+        <label for="">Hola de nuevo</label>
+        <label for="">nombre</label>
+    </div>
+</section>
+<!--inicio de sesion de Mali -->
+<section id="usuarioIniciado-Mali" class="usuarioIniciado">
+    <div class="cuadrodeaccion">
+        <label for="">Hola de nuevo</label>
+        <label for="">nombre</label>
+    </div>
+</section>
+
+<script src="./Objetos.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

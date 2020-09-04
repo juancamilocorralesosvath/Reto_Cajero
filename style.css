@@ -1,0 +1,59 @@
+main{ 
+    background-image: url(./assets/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+h1{ 
+    font-size: 60px;
+    color: rgb(223, 23, 23);
+    margin-top: 10px;
+    font-family: 'Ultra', serif;
+}
+
+header h1{ 
+    text-align: center;
+
+}
+
+section{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.cont-user{ 
+    display: flex;
+    margin-top: 60px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: solid 5px white;
+}
+.cont-user:hover{ 
+    background-color: #ffffff;
+}
+.img-user{ 
+    height: 180px;
+    width: 150px;
+    border-radius: 100px;
+}
+
+.validacion{ 
+    display: none;
+}
+
+.usuarioIniciado{
+    display: none;
+}
+.cuadrodeaccion{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mostrarSaldo{ 
+    display: none;
+}
+.ingresarMonto{ 
+    display: none;
+}
