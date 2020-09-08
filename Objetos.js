@@ -2,8 +2,8 @@
 
 let Malinali = {
   nombre: "Mali",
-  saldo: 200,
-  password: 'helloworld',
+  saldo: 700,
+  password: 'oliwis',
   ingresarClave: function () {
     let correcto = false;
     while (correcto === false) {
@@ -19,38 +19,30 @@ let Malinali = {
   mostrarSaldo: function () {
     alert("Mali, tu saldo es de $" + this.saldo);
   },
-  ingresarMonto: function () { 
-    let montoIngresado = Number(prompt("Por favor, ingresa la cantidad que deseas ingresar."));
-    this.validarCantidadSuperior(montoIngresado);
-    
-    alert("Muchas gracias por usar nuestros servicios!");
-
-  }, 
-
-  validarCantidadSuperior: function(monto){ 
+  ingresarMonto: function(monto){ 
     
     let nuevoSaldo = monto + this.saldo;
     if(nuevoSaldo <= 990){ 
       
       this.saldo = nuevoSaldo;
-      alert("vale! ingresaste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!");
+
+      // let div = document.getElementById("ingresoExitoso");
+      ingresoExitoso3.style.display = "block";
+      saldoResultanteMali.innerHTML = "vale! ingresaste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!\n Muchas gracias por usar nuestros servicios!";
     }else{ 
       alert("lo sentimos mucho, pero no puedes tener mas de $990 en tu cuenta.");
     }
   }, 
-  retirarMonto: function(){ 
-    let montoRetirar = Number(prompt("Por favor, ingresa la cantidad que deseas retirar."));
-    this.validarCantidadInferior(montoRetirar);
-    
-    alert("Muchas gracias por usar nuestros servicios!");
-  }, 
-  validarCantidadInferior: function(monto){ 
+  retirarMonto: function(monto){ 
 
     let nuevoSaldo = this.saldo - monto;
     if(nuevoSaldo >= 10){ 
       
       this.saldo = nuevoSaldo;
-      alert("vale! retiraste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!");
+
+      // let div = document.getElementById("RetiroExitoso");
+      divRetiroMontoExitoso3.style.display = "block";
+      saldoResultanteMali2.innerHTML = "vale! retiraste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!\n Muchas gracias por usar nuestros servicios!";
     }else{ 
       alert("lo sentimos mucho, pero no puedes tener menos de $10 en tu cuenta.");
     }
@@ -60,7 +52,7 @@ let Malinali = {
 let Gerardo = {
   nombre: "Gera",
   saldo: 290,
-  password: 'hola',
+  password: 'soygera',
   ingresarClave: function () {
     let correcto = false;
     while (correcto === false) {
@@ -76,43 +68,36 @@ let Gerardo = {
   mostrarSaldo: function () {
     alert("Gera, tu saldo es de $" + this.saldo);
   },
-  ingresarMonto: function () { 
-    let montoIngresado = Number(prompt("Por favor, ingresa la cantidad que deseas ingresar."));
-    this.validarCantidadSuperior(montoIngresado);
-    
-    alert("Muchas gracias por usar nuestros servicios!");
-
-  }, 
-
-  validarCantidadSuperior: function(monto){ 
+  ingresarMonto: function(monto){ 
     
     let nuevoSaldo = monto + this.saldo;
     if(nuevoSaldo <= 990){ 
       
       this.saldo = nuevoSaldo;
-      alert("vale! ingresaste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!");
+
+      // let div = document.getElementById("ingresoExitoso");
+      ingresoExitoso2.style.display = "block";
+      saldoResultanteGera.innerHTML = "vale! ingresaste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!\n Muchas gracias por usar nuestros servicios!";
     }else{ 
       alert("lo sentimos mucho, pero no puedes tener mas de $990 en tu cuenta.");
     }
   }, 
-  retirarMonto: function(){ 
-    let montoRetirar = Number(prompt("Por favor, ingresa la cantidad que deseas retirar."));
-    this.validarCantidadInferior(montoRetirar);
-    
-    alert("Muchas gracias por usar nuestros servicios!");
-  }, 
-  validarCantidadInferior: function(monto){ 
+  retirarMonto: function(monto){ 
 
     let nuevoSaldo = this.saldo - monto;
     if(nuevoSaldo >= 10){ 
       
       this.saldo = nuevoSaldo;
-      alert("vale! retiraste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!");
+
+      // let div = document.getElementById("RetiroExitoso");
+      divRetiroMontoExitoso2.style.display = "block";
+      saldoResultanteGera2.innerHTML = "vale! retiraste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!\n Muchas gracias por usar nuestros servicios!";
     }else{ 
       alert("lo sentimos mucho, pero no puedes tener menos de $10 en tu cuenta.");
     }
   },
 };
+
 
 let Mauricio = {
   nombre: "Maui",
@@ -133,38 +118,30 @@ let Mauricio = {
   mostrarSaldo: function () {
     alert("Maui, tu saldo es de $" + this.saldo);
   },
-  ingresarMonto: function (montoIngresado) { 
-  
-    this.validarCantidadSuperior(montoIngresado);
-    
-    alert("Muchas gracias por usar nuestros servicios!");
-
-  }, 
-
-  validarCantidadSuperior: function(monto){ 
+  ingresarMonto: function(monto){ 
     
     let nuevoSaldo = monto + this.saldo;
     if(nuevoSaldo <= 990){ 
       
       this.saldo = nuevoSaldo;
-      alert("vale! ingresaste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!");
+
+      // let div = document.getElementById("ingresoExitoso");
+      ingresoMontoExitoso.style.display = "block";
+      saldoResultante.innerHTML = "vale! ingresaste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!\n Muchas gracias por usar nuestros servicios!";
     }else{ 
       alert("lo sentimos mucho, pero no puedes tener mas de $990 en tu cuenta.");
     }
   }, 
-  retirarMonto: function(){ 
-    let montoRetirar = Number(prompt("Por favor, ingresa la cantidad que deseas retirar."));
-    this.validarCantidadInferior(montoRetirar);
-    
-    alert("Muchas gracias por usar nuestros servicios!");
-  }, 
-  validarCantidadInferior: function(monto){ 
+  retirarMonto: function(monto){ 
 
     let nuevoSaldo = this.saldo - monto;
     if(nuevoSaldo >= 10){ 
       
       this.saldo = nuevoSaldo;
-      alert("vale! retiraste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!");
+
+      // let div = document.getElementById("RetiroExitoso");
+      divRetiroMontoExitoso.style.display = "block";
+      saldoResultante2.innerHTML = "vale! retiraste $"+monto+ ", por lo que ahora tienes $"+this.saldo+" en tu cuenta!\n Muchas gracias por usar nuestros servicios!";
     }else{ 
       alert("lo sentimos mucho, pero no puedes tener menos de $10 en tu cuenta.");
     }

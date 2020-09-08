@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,89 +8,240 @@
     <title>El Cajero Mas Cabron del Mundo</title>
     <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
 
-   
+
 </head>
-<body> 
 
-<main id="paginaSeleccion">
+<body>
 
-    <header>
-        <h1>Bienvenid@! por favor selecciona tu cuenta.</h1>
-    </header>
+    <main id="paginaSeleccion">
 
-    <section>
+        <header>
+            <h1>Bienvenid@! por favor selecciona tu cuenta.</h1>
+        </header>
 
-        <!-- cuenta de Maui -->
-        <div onclick="ingresar()" id="maui" class="cont-user">
-            <img class="img-user" src="./assets/ElMaui.png" alt="Maui!">
-            <h1>
-                EL MAUI
-            </h1>
+        <section>
+
+            <!-- cuenta de Maui -->
+            <div onclick="ingresar()" id="maui" class="cont-user">
+                <img class="img-user" src="./assets/ElMaui.png" alt="Maui!">
+                <h1>
+                    EL MAUI
+                </h1>
+            </div>
+            <!-- cuenta de Gera -->
+            <div onclick="ingresar()" id="gera" class="cont-user">
+                <img class="img-user" src="./assets/ElGera.jpg" alt="Gera!">
+                <h1>
+                    EL GERA
+                </h1>
+            </div>
+            <!-- cuenta de Mali -->
+            <div onclick="ingresar()" id="mali" class="cont-user">
+                <img class="img-user" src="./assets/LaMali.jpg" alt="Mali!">
+                <h1>
+                    LA MALI
+                </h1>
+            </div>
+        </section>
+    </main>
+
+    <!-- Validacion de identidad -->
+
+    <div id="validacion" class="validacion">
+        <h2>Por favor verifica tu identidad</h2>
+        <p>ingresa tu contraseña para que sepamos que NO ERES UN PUTO LADRON Y TENGAMOS QUE LLEVARTE AL CARAJO</p>
+        <input id="claveIngresada" type="password" placeholder="ingresa tu clave">
+        <button onclick="validarContraseña()" id="ingresar">ingresar</button>
+    </div>
+    <!-- este es el inicio de sesion de maui -->
+    <section id="inicioMaui" class="usuarioIniciado">
+
+        <div id="cuadrodeaccion" class="cuadrodeaccion">
+            <h1>Bien o no Maui? queres chumbimba o que?</h1>
+            <div class="inputs">
+                <h2>por favor, indica que es lo que deseas hacer</h2>
+                <button onclick="consultarSaldo(Mauricio)" id="btnconsultar">Consultar Saldo</button>
+                <button onclick="MostrarIngresarMonto()">Ingresar Monto</button>
+                <button onclick="MostrarRetirarMonto()">Retirar Monto</button>
+                <button onclick="salir()">Salir</button>
+            </div>
+            <div id="mostrarSaldo" class="mostrarSaldo">
+                <h1 id="cuantoEs">cantidad</h1>
+            </div>
         </div>
-        <!-- cuenta de Gera -->
-        <div onclick="ingresar()" id="gera" class="cont-user">
-            <img class="img-user" src="./assets/ElGera.jpg" alt="Gera!">
-            <h1>
-                EL GERA
-            </h1>   
+
+
+        <div id="ingresarMonto" class="ingresarMonto" name="esconder">
+            <h2>Cuanto deseas ingresar?</h2>
+            <input id="montoIngresado" type="text" placeholder="Saldo a ingresar">
+            <button onclick="ingresarMonto()" id="btnIngresarMonto">Ingresar Monto</button>
+
+            <div id="ingresoExitoso" class="ingreso-exitoso" name="esconder">
+
+                <h2>Genial!Has ingresado dinero exitosamente a tu cuenta, buena esa papu!Eso significa que estas
+                    camellando!</h2>
+                <h3 id="saldoResultante"></h3>
+                <button onclick="refresh()" class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+            <div id="ingresoNoExitoso" class="ingreso-no-exitoso">
+                <h2>Lo sentimos, no pudimos ingresar a la cuenta, recuerda que no puedes tener mas de $990 en nuestro
+                    banco.</h2>
+                <button class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
         </div>
-        <!-- cuenta de Mali -->
-        <div onclick="ingresar()" id="mali" class="cont-user">
-            <img class="img-user" src="./assets/LaMali.jpg" alt="Mali!">
-            <h1>
-                LA MALI
-            </h1>      
+
+        <div id="retirarMonto" class="retirarMonto">
+
+            <h2>Cuanto deseas retirar?</h2>
+            <input id="montoRetirar" type="text" placeholder="Saldo a retirar">
+            <button onclick="retirarMonto()" id="btnRetirarMonto">Retirar Monto</button>
+
+            <div id="RetiroExitoso" class="retiro-exitoso">
+
+                <h2>Vale! has retirado exitosamente de cuenta...por favor, no te lo gastes en pendejadas.bye!</h2>
+                <h3 id="saldoResultante2"></h3>
+                <button onclick="refresh2()" class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+            <div id="retiroNoExitoso" class="retiro-no-exitoso">
+                <h2>Lo sentimos, no pudimos retirar de la cuenta, recuerda que no puedes tener menos de $10 en nuestro
+                    banco. pendejo</h2>
+                <button class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    <!--inicio de sesion de Gera -->
+    <section id="inicioGera" class="usuarioIniciado">
+        <div id="cuadrodeaccion2" class="cuadrodeaccion">
+            <h1>Hola Gera! que onda?</h1>
+            <div class="inputs">
+                <h2>por favor, indica que es lo que deseas hacer</h2>
+                <button onclick="consultarSaldoGera(Gerardo)" id="btnconsultar">Consultar Saldo</button>
+                <button onclick="MostrarIngresarMontoGera()">Ingresar Monto</button>
+                <button onclick="MostrarRetirarMontoGera()">Retirar Monto</button>
+                <button onclick="salirGera()">Salir</button>
+            </div>
+            <div id="mostrarSaldo2" class="mostrarSaldo">
+                <h1 id="cuantoEs2">cantidad</h1>
+            </div>
+        </div>
+
+
+        <div id="ingresarMonto2" class="ingresarMonto">
+            <h2>Cuanto deseas ingresar?</h2>
+            <input id="montoIngresado2" type="text" placeholder="Saldo a ingresar">
+            <button onclick="ingresarMontoGera()" id="btnIngresarMonto2">Ingresar Monto</button>
+
+            <div id="ingresoExitoso2" class="ingreso-exitoso">
+
+                <h2>Genial!Has ingresado dinero exitosamente a tu cuenta, buena esa papu!Eso significa que estas
+                    camellando!</h2>
+                <h3 id="saldoResultanteGera"></h3>
+                <button onclick="refresh1Gera()" class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+            <div id="ingresoNoExitoso2" class="ingreso-no-exitoso">
+                <h2>Lo sentimos, no pudimos ingresar a la cuenta, recuerda que no puedes tener mas de $990 en nuestro
+                    banco.</h2>
+                <button class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+        </div>
+
+        <div id="retirarMonto2" class="retirarMonto">
+
+            <h2>Cuanto deseas retirar?</h2>
+            <input id="montoRetirar2" type="text" placeholder="Saldo a retirar">
+            <button onclick="retirarMontoGera()" id="btnRetirarMonto">Retirar Monto</button>
+
+            <div id="RetiroExitoso2" class="retiro-exitoso">
+
+                <h2>Vale! has retirado exitosamente de cuenta...por favor, no te lo gastes en pendejadas.bye!</h2>
+                <h3 id="saldoResultanteGera2"></h3>
+                <button onclick="refresh2Gera()" class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+            <div id="retiroNoExitoso2" class="retiro-no-exitoso">
+                <h2>Lo sentimos, no pudimos retirar de la cuenta, recuerda que no puedes tener menos de $10 en nuestro
+                    banco. pendejo</h2>
+                <button class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+
+
         </div>
     </section>
-</main>   
 
-<!-- Validacion de identidad -->
-
-<div id="validacion" class="validacion">
-    <h2>Por favor verifica tu identidad</h2>
-    <p>ingresa tu contraseña para que sepamos que NO ERES UN PUTO LADRON Y TENGAMOS QUE LLEVARTE AL CARAJO</p>
-    <input id="claveIngresada" type="password" placeholder="ingresa tu clave">
-    <button onclick="validarContraseña()" id="ingresar">ingresar</button>
-</div>
-<!-- este es el inicio de sesion de maui -->
-<section id="inicioMaui" class="usuarioIniciado">
-
-    <div id="cuadrodeaccion" class="cuadrodeaccion">
-        <label for="">Hola de nuevo</label>
-        <label for="">nombre</label>
-        <div class="inputs">
-            <h2>por favor, indica que es lo que deseas hacer</h2>
-            <button onclick="consultarSaldo(Mauricio)" id="btnconsultar">Consultar Saldo</button>
-            <button onclick="MostrarIngresarMonto()">Ingresar Monto</button>
-            <button>Retirar Monto</button>
+    <!--inicio de sesion de Mali -->
+    <section id="inicioMali" class="usuarioIniciado">
+        <div id="cuadrodeaccion3" class="cuadrodeaccion">
+            <h1>Maliiiiiiiiiiii!</h1>
+            <div class="inputs">
+                <h2>por favor, indica que es lo que deseas hacer</h2>
+                <button onclick="consultarSaldoMali(Malinali)" id="btnconsultar">Consultar Saldo</button>
+                <button onclick="MostrarIngresarMontoMali()">Ingresar Monto</button>
+                <button onclick="MostrarRetirarMontoMali()">Retirar Monto</button>
+                <button onclick="salirMali()">Salir</button>
+            </div>
+            <div id="mostrarSaldo3" class="mostrarSaldo">
+                <h1 id="cuantoEs3">cantidad</h1>
+            </div>
         </div>
-    </div>
 
-    <div id="mostrarSaldo" class="mostrarSaldo">
-        <h1 id="cuantoEs">cantidad</h1>
-    </div>
-    <div id="ingresarMonto" class="ingresarMonto">
-        <h2>Cuanto deseas ingresar?</h2>
-        <input id="montoIngresado" type="text" placeholder="Saldo a ingresar">
-        <button  onclick="ingresarMonto()" id="btnIngresarMonto">Ingresar Monto</button>
-    </div>
-</section>
-<!--inicio de sesion de Gera -->
-<section id="usuarioIniciado-Gera" class="usuarioIniciado">
-    <div class="cuadrodeaccion">
-        <label for="">Hola de nuevo</label>
-        <label for="">nombre</label>
-    </div>
-</section>
-<!--inicio de sesion de Mali -->
-<section id="usuarioIniciado-Mali" class="usuarioIniciado">
-    <div class="cuadrodeaccion">
-        <label for="">Hola de nuevo</label>
-        <label for="">nombre</label>
-    </div>
-</section>
 
-<script src="./Objetos.js"></script>
-<script src="./main.js"></script>
+        <div id="ingresarMonto3" class="ingresarMonto">
+            <h2>Cuanto deseas ingresar?</h2>
+            <input id="montoIngresado3" type="text" placeholder="Saldo a ingresar">
+            <button onclick="ingresarMontoMali()">Ingresar Monto</button>
+
+            <div id="ingresoExitoso3" class="ingreso-exitoso">
+
+                <h2>Genial!Has ingresado dinero exitosamente a tu cuenta, buena esa papu!Eso significa que estas
+                    camellando!</h2>
+                <h3 id="saldoResultanteMali"></h3>
+                <button onclick="refresh1Mali()" class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+            <div id="ingresoNoExitoso3" class="ingreso-no-exitoso">
+                <h2>Lo sentimos, no pudimos ingresar a la cuenta, recuerda que no puedes tener mas de $990 en nuestro
+                    banco.</h2>
+                <button class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+        </div>
+
+        <div id="retirarMonto3" class="retirarMonto">
+
+            <h2>Cuanto deseas retirar?</h2>
+            <input id="montoRetirar3" type="text" placeholder="Saldo a retirar">
+            <button onclick="retirarMontoMali()" id="btnRetirarMonto">Retirar Monto</button>
+
+            <div id="RetiroExitoso3" class="retiro-exitoso">
+
+                <h2>Vale! has retirado exitosamente de cuenta...por favor, no te lo gastes en pendejadas.bye!</h2>
+                <h3 id="saldoResultanteMali2"></h3>
+                <button onclick="refresh2Mali()" class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+            <div id="retiroNoExitoso3" class="retiro-no-exitoso">
+                <h2>Lo sentimos, no pudimos retirar de la cuenta, recuerda que no puedes tener menos de $10 en nuestro
+                    banco. pendejo</h2>
+                <button class="btn-volver-cuenta">Volver a mi cuenta</button>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <script src="./Objetos.js"></script>
+    <script src="./main.js"></script>
 </body>
+
 </html>

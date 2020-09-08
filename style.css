@@ -41,6 +41,11 @@ section{
 
 .validacion{ 
     display: none;
+    background-image: url(./assets/verificacion-bg.gif);
+    height: 120vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .usuarioIniciado{
@@ -51,9 +56,6 @@ section{
     justify-content: center;
     align-items: center;
 }
-.mostrarSaldo{ 
-    display: none;
-}
-.ingresarMonto{ 
+.mostrarSaldo, .ingresarMonto, .ingreso-exitoso, .ingreso-no-exitoso, .retirarMonto, .retiro-exitoso, .retiro-no-exitoso{ 
     display: none;
 }
